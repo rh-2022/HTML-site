@@ -1,51 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Tech Career Advice ChatBot MS</title>
-    <script src="https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.8.3/firebase-firestore.js"></script>
+    <title>Test Page</title>
 </head>
 <body>
-    <iframe src="https://copilotstudio.microsoft.com/environments/Default-c1136be9-3a18-45ff-8099-b182bfd6890c/bots/cr2b6_techCareerAdviceChatBotMs/webchat?__version__=2" frameborder="0" style="width: 100%; height: 100%;"></iframe>
-
-    <script>
-        // Your web app's Firebase configuration
-        const firebaseConfig = {
-            apiKey: "AIzaSyBxkOkjnO6TIb739gAybKszR0Ax7fXrr8s",
-            authDomain: "tech-career-advice-ms.firebaseapp.com",
-            projectId: "tech-career-advice-ms",
-            storageBucket: "tech-career-advice-ms.appspot.com",
-            messagingSenderId: "72627010242",
-            appId: "1:726270102421:web:ec01819b0156d8416b849c"
-        };
-
-        // Initialize Firebase
-        const app = firebase.initializeApp(firebaseConfig);
-        const db = firebase.firestore(app);
-
-        // Function to store user input in Firestore
-        async function storeUserInput(input) {
-            try {
-                await db.collection("inputs").add({
-                    input: input,
-                    timestamp: firebase.firestore.FieldValue.serverTimestamp()
-                });
-                console.log("Input stored in Firestore");
-            } catch (error) {
-                console.error("Error storing input: ", error);
-            }
-        }
-
-        // Mock function to simulate capturing user input from the iframe
-        function captureInput() {
-            const input = prompt("Enter user input:"); // Replace this with actual input capture logic
-            if (input) {
-                storeUserInput(input);
-            }
-        }
-
-        // Simulate capturing input for demo purposes
-        setTimeout(captureInput, 5000); // Simulate after 5 seconds
-    </script>
+    <h1>Hello, World!</h1>
 </body>
 </html>
